@@ -1,0 +1,181 @@
+/* .carousel-caption{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+} */
+.carousel-caption{
+    margin-bottom: 250px;
+    margin-right: 300px;
+}
+
+
+.mg1 {
+  --s: 100px;   /* the size of the image */
+  --b: 8px;     /* the border thickness*/
+  --g: 11px;    /* the gap */
+  --c: #49a373; /* the color */
+   
+  /* width: var(--s); */
+  aspect-ratio: 1;
+  outline: calc(var(--s)/2) solid #0009;
+  outline-offset: calc(var(--s)/-2);
+   cursor: pointer; 
+  transition: 0.7s;
+}
+.mg1:hover {
+   outline: var(--b) solid var(--c); 
+   outline-offset: var(--g);
+}
+
+mg1 + mg1 {
+  border-radius: 40%;
+}
+
+
+
+body {
+  margin:50px;
+  background:url('https://subtlepatterns.com/patterns/textured_paper.png');
+} 
+
+
+body {
+  margin: 0;
+  /* min-height: 100vh; */
+  display: grid;
+  grid-auto-flow: column;
+  gap: 50px;
+  place-content: center;
+  place-items: center;
+  /* background: #C8C8A9; */
+
+}
+
+
+
+.circle-1 {
+  width:130px;
+  height:130px;
+
+  border-radius: 50%;
+  border:16px solid #49a373;
+  float:left;
+}
+
+.circle-1 img {
+  /* width:110px;
+  height:100px; */
+  /* border-radius: 50%; */
+  cursor:pointer;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.4s linear;
+}
+.circle-1:hover img {
+ transform: scale(1.1);
+-ms-transform: scale(1.1); 
+-webkit-transform: scale(1.1);
+  box-shadow: 5px 5px 5px black;
+  
+}
+
+
+
+li{
+  font-size: 17px;
+  width: 6em;
+  height: 3em;
+  text-align: center;
+  line-height: 3em;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  position: relative;
+  transition: 0.3s;
+  margin: 0.9em;
+}
+
+li::before,
+li::after {
+  content: '';
+  position: absolute;
+  width: 0.6em;
+  height: 0.6em;
+  /* background-color: gainsboro; */
+  border-radius: 50%;
+  transition: 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5);
+  top: calc(50% - 0.6em / 2);
+}
+
+li::before {left: 0; z-index: -1;}
+li::after {right: 0; z-index: -2;}
+
+li:hover {
+  color: white;
+}
+
+li:hover::before,
+li:hover::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  /* background-color: dodgerblue; */
+  background-color: #3C2A21;
+}
+
+li:hover::before {
+  top: 0;
+}
+
+li:hover::after {
+  right: -0.4em;
+  filter: brightness(0.8);
+}
+
+.navbtn{
+  background-color: red;
+  color:white;
+}
+
+.navbtn:hover{
+  background-color: white;
+  color:black;
+  transition: 0.3s;
+}
+
+.read{
+  background-color: white;
+  color: black;
+}
+ 
+.read:hover{
+  background-color:#49a373;
+  color: black;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: red;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: red;
+}
+
+.bgimg1{
+    background-image: url(../img/Image111.jpg);
+    background-size: 100% 100%;
+    /* height: 450px; */
+}
